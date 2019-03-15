@@ -27,11 +27,11 @@ class BlogCategoriesTableSeeder extends Seeder
         	$categories[] = [
     		    "title" => $categoryName,
     			"slug" => str_slug($categoryName),
-    			"parent_id" => $parentId
+    			"parent_id" => $parentId,
 
-        	]
-        }
+        	];
+        };
 
-        \DB::table('blog_categories')->insert($categories);
+        DB::table('blog_categories')->insert($categories);
     }
 }
